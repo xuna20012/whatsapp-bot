@@ -1,4 +1,3 @@
-from flask import Flask, request
 from wa_automate_socket_client import SocketClient
 from wati_api import client
 from pymongo import MongoClient
@@ -6,15 +5,12 @@ from datetime import datetime
 import mysql.connector
 
 
-cluster = MongoClient("mongodb+srv://ouna:7815@cluster0.sq0kuyg.mongodb.net/?retryWrites=true&w=majority", tls=True, tlsAllowInvalidCertificates=True)
+cluster = MongoClient("mongodb+srv://ouna:7815@cluster0.sq0kuyg.mongodb.net/?retryWrites=true&w=majority")
 db = cluster["dbase"]
 users = db["users"]
 orders = db["orders"]
 
 client = SocketClient('http://localhost:5000/', '778042525cC.')
-
-app = Flask(__name__)
-@app.route("/", methods=["get", "post"])
 
 def reply(message):
     data = message["data"]
