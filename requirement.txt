@@ -1,5 +1,2 @@
-flask
-twilio
 pymongo
 dnspython
-gunicorn
