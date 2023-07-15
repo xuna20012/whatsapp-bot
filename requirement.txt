@@ -1,2 +1,2 @@
-pymongo
-dnspython
+pymongo==3.12.0
+wa-automate-socket-client==0.2.0
