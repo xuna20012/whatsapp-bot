@@ -28,10 +28,6 @@
     "ENABLE_DELETE_ALERT": {
       "description": "If true & if someone delete message in PM, Bot will send the deleted message in that chat (Exclude Media)",
       "value": "true"
-    },
-    "OCR_SPACE_API_KEY": {
-      "description": "Get it from https://ocr.space/OCRAPI",
-      "value": ""
     }
   }
 }
