@@ -1,0 +1,4 @@
+build:
+  - name: Python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
