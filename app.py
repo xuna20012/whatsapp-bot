@@ -1,4 +1,3 @@
-from flask import Flask, request
 from wa_automate_socket_client import SocketClient
 from pymongo import MongoClient
 from datetime import datetime
@@ -13,7 +12,6 @@ commandes = db["services"]
 
 client = SocketClient('http://localhost:27017/')
 
-app = Flask(__name__)
 
 # Chargement des messages à partir du fichier config.json
 with open('config.json', encoding='utf-8') as config_file:
@@ -53,7 +51,6 @@ Paiment_orange_money = config_data["Paiment_orange_money"]
 Paiment_free_money = config_data["Paiment_free_money"]
 
 
-@app.route("/", methods=["get", "post"])
 def reply(message):
     data = message["data"]
     text = data["text"].encode('latin-1').decode('utf-8')
