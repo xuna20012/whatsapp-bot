@@ -1,6 +1,6 @@
 # whatsapp-bot
 Deploy :
 
-Deploy with Heroku
+Deploy with Render
 
     Railway template url is officially removed (#62)
